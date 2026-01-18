@@ -1,3 +1,9 @@
 # skategame
 
-Static skateboarding game with HTML, CSS, and JavaScript using a canvas-based runner-style mechanic.
+Project overview goes here.
+
+## Setup
+- Add setup steps here.
+
+## Development
+- Add dev commands here.
