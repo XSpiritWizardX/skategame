@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: skategame
+    env: static
+    staticPublishPath: public
+    buildCommand: mkdir -p public && cp index.html public/index.html
+    autoDeploy: true
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"
