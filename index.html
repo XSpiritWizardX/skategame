@@ -3,49 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Street Push</title>
+    <title>skategame</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrap">
+    <main>
       <header>
-        <h1>Street Push</h1>
-        <p class="sub">Kick, jump, and grind past the city junk.</p>
+        <strong>skategame</strong>
+        <a class="button" href="#pricing">Get Early Access</a>
       </header>
-
-      <section class="game-panel">
-        <canvas id="game" width="960" height="420" aria-label="Skateboarding game"></canvas>
-        <div class="hud" aria-live="polite">
-          <span id="score">Score: 0</span>
-          <span id="best">Best: 0</span>
-          <span id="speed">Speed: 1.0x</span>
-        </div>
-        <div class="overlay" id="overlay">
-          <div class="card">
-            <h2 id="overlay-title">Ready to ride?</h2>
-            <p id="overlay-text">Press Space to jump, Shift to kick (short boost), and press R to restart.</p>
-            <button id="start-btn">Start Run</button>
-          </div>
+      <section class="card">
+        <h1>skategame keeps your team focused.</h1>
+        <p>A focused SaaS that helps teams ship faster.</p>
+        <div class="button">Join the waitlist</div>
+      </section>
+      <section>
+        <h2>Features</h2>
+        <div class="card">
+          <p>Signal tracking, playbooks, and clear next steps in one place.</p>
         </div>
       </section>
-
-      <section class="controls">
-        <div>
-          <strong>Controls</strong>
-          <ul>
-            <li>Space: jump / ollie</li>
-            <li>Shift: kick for a burst</li>
-            <li>Arrow Down: crouch to roll under bars</li>
-            <li>R: restart</li>
-          </ul>
-        </div>
-        <div>
-          <strong>Goal</strong>
-          <p>Chain clean landings and boosts to build the score multiplier. Watch for cones, bins, and low bars.</p>
+      <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="card">
+          <p>Simple plans that scale with your revenue.</p>
         </div>
       </section>
-    </div>
-
-    <script src="script.js"></script>
+      <section>
+        <h2>FAQ</h2>
+        <div class="card">
+          <p>How fast can we launch? Typically in days.</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
