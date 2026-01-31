@@ -1,4 +1,1 @@
-- Extend the overlay in `public/index.html` with a setup step (difficulty select, environment select, toggles for mute + reduced motion) and keep the Start button on the same card.
-- Create `public/settings.js` to load/save settings to localStorage, expose a `getSettings()` object, and emit a `settingschange` event when controls change.
-- Update `public/game.js` to read settings at run start and apply to physics (base speed, gravity, obstacle spawn cadence) and visuals (background class, particle density).
-- Add minimal styles for the setup controls in `public/styles.css`, including focus and keyboard states.
+Add a <div class="setup"> block before the Start button with labeled controls: #setting-difficulty (easy/normal/hard), #setting-environment (park/street/warehouse), #setting-mute (checkbox), #setting-reduced-motion (checkbox). Keep the existing Start button within the same overlay/card container and add brief helper text for each control.
