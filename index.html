@@ -23,7 +23,7 @@
         </header>
         <main>
           <section class="hero reveal">
-            <div>
+            <div class="hero-copy">
               <span class="badge">Ship faster · stay aligned</span>
               <h1>skategame keeps momentum high.</h1>
               <p>A focused product built to ship faster.</p>
@@ -31,53 +31,134 @@
                 <input type="email" name="email" placeholder="you@company.com" required />
                 <button class="button" type="submit">Join the waitlist</button>
               </form>
-              <p id="waitlist-message"></p>
+              <div id="waitlist-message" class="form-note" aria-live="polite"></div>
+              <div class="stat-row">
+                <div>
+                  <strong>2.7x</strong>
+                  <span>Faster launches</span>
+                </div>
+                <div>
+                  <strong>48h</strong>
+                  <span>Average kickoff</span>
+                </div>
+                <div>
+                  <strong>92%</strong>
+                  <span>On-time milestones</span>
+                </div>
+              </div>
             </div>
-            <div class="panel">
-              <h3>Live pulse</h3>
-              <p>Track experiments, revenue impact, and launch readiness in one view.</p>
-              <div class="stat-grid">
-                <div class="stat"><strong>3x</strong><br/>Faster rollout</div>
-                <div class="stat"><strong>12</strong><br/>Active signals</div>
-                <div class="stat"><strong>97%</strong><br/>Team clarity</div>
+            <div class="hero-card">
+              <div class="card-header">
+                <span>Live Sprint</span>
+                <span class="pill">Active</span>
+              </div>
+              <div class="card-body">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+                <ul>
+                  <li>Kickoff + scope lock</li>
+                  <li>Asset pipeline set</li>
+                  <li>Feedback lanes clear</li>
+                  <li>Launch checklist green</li>
+                </ul>
+              </div>
+              <div class="card-footer">Next drop in 6 days</div>
+            </div>
+          </section>
+
+          <section id="features" class="features reveal">
+            <div class="section-title">
+              <h2>Momentum tools built for shipping.</h2>
+              <p>Keep the skatepark busy with a clear lane from idea to drop.</p>
+            </div>
+            <div class="grid">
+              <article>
+                <h3>Launch lanes</h3>
+                <p>Auto-organize sprints into launch-ready tracks with instant dependency alerts.</p>
+              </article>
+              <article>
+                <h3>Signal-first updates</h3>
+                <p>Replace noisy threads with a single signal board that keeps everyone synced.</p>
+              </article>
+              <article>
+                <h3>Momentum metrics</h3>
+                <p>Track velocity, blockages, and ship confidence from one cinematic dashboard.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="workflow" class="workflow reveal">
+            <div class="section-title">
+              <h2>Workflow that never stalls.</h2>
+              <p>Go from kickoff to launch in three crisp moves.</p>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <span class="step-index">01</span>
+                <h3>Stack the run</h3>
+                <p>Define scope, align teams, and set the drop schedule in minutes.</p>
+              </div>
+              <div class="step">
+                <span class="step-index">02</span>
+                <h3>Stay on the rail</h3>
+                <p>Live checkpoints keep product, design, and engineering in tight sync.</p>
+              </div>
+              <div class="step">
+                <span class="step-index">03</span>
+                <h3>Land the launch</h3>
+                <p>Instant retros let you lock in wins and adjust your next sprint.</p>
               </div>
             </div>
           </section>
-          <section id="features" class="section reveal">
-            <h2>Features</h2>
-            <div class="grid">
-              <div class="card">Signal playbooks with owners and next actions.</div>
-              <div class="card">Sprint-ready launch checklists and guardrails.</div>
-              <div class="card">Pricing and positioning snapshots in minutes.</div>
+
+          <section id="pricing" class="pricing reveal">
+            <div class="section-title">
+              <h2>Pricing for fast-moving teams.</h2>
+              <p>Start free. Upgrade when you are ready to drop bigger releases.</p>
+            </div>
+            <div class="pricing-grid">
+              <div class="price-card">
+                <h3>Starter</h3>
+                <p class="price">$0</p>
+                <ul>
+                  <li>3 active sprints</li>
+                  <li>Core momentum board</li>
+                  <li>Launch checklist</li>
+                </ul>
+                <button class="button ghost">Get started</button>
+              </div>
+              <div class="price-card featured">
+                <h3>Momentum</h3>
+                <p class="price">$24</p>
+                <ul>
+                  <li>Unlimited sprints</li>
+                  <li>Live stakeholder view</li>
+                  <li>Priority launch support</li>
+                </ul>
+                <button class="button">Start Momentum</button>
+              </div>
+              <div class="price-card">
+                <h3>Studio</h3>
+                <p class="price">$62</p>
+                <ul>
+                  <li>Multi-team orchestration</li>
+                  <li>Custom lanes + metrics</li>
+                  <li>Dedicated launch pod</li>
+                </ul>
+                <button class="button ghost">Talk to us</button>
+              </div>
             </div>
           </section>
-          <section id="workflow" class="section reveal">
-            <h2>Workflow</h2>
-            <div class="grid">
-              <div class="card">Define your goal and timeline in a single brief.</div>
-              <div class="card">Assign owners, blockers, and escalation routes.</div>
-              <div class="card">Ship with confidence and keep momentum visible.</div>
+
+          <section id="cta" class="cta reveal">
+            <div>
+              <h2>Ready to keep momentum high?</h2>
+              <p>Join the waitlist and get a private onboarding session when we open access.</p>
             </div>
-          </section>
-          <section id="pricing" class="section reveal">
-            <h2>Pricing</h2>
-            <div class="grid">
-              <div class="card">Starter · $39/mo · launch playbooks</div>
-              <div class="card">Growth · $99/mo · team dashboards</div>
-              <div class="card">Scale · $249/mo · priority support</div>
-            </div>
-          </section>
-          <section id="cta" class="section reveal">
-            <div class="cta">
-              <h2>Ready to move faster?</h2>
-              <p>Join the early access list and get weekly launch guidance.</p>
-              <a class="button" href="#">Request access</a>
-            </div>
+            <a class="button" href="#waitlist-form">Join the waitlist</a>
           </section>
         </main>
-        <footer>
-          <span>skategame · Built for momentum</span>
-        </footer>
       </div>
     </div>
   </body>
