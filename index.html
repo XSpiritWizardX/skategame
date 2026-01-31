@@ -11,6 +11,7 @@
     <div class="page">
       <div class="orb orb--one"></div>
       <div class="orb orb--two"></div>
+      <div class="grain"></div>
       <div class="shell">
         <header class="nav">
           <div class="logo">skategame</div>
@@ -22,143 +23,171 @@
           <a class="button" href="#cta">Get Access</a>
         </header>
         <main>
-          <section class="hero reveal">
+          <section class="hero reveal" id="top">
             <div class="hero-copy">
-              <span class="badge">Ship faster · stay aligned</span>
+              <span class="badge">Momentum suite · live now</span>
               <h1>skategame keeps momentum high.</h1>
-              <p>A focused product built to ship faster.</p>
-              <form id="waitlist-form">
+              <p>A focused product built to ship faster: routes decisions, locks focus, and turns feedback into traction without the noise.</p>
+              <form id="waitlist-form" class="waitlist">
                 <input type="email" name="email" placeholder="you@company.com" required />
-                <button class="button" type="submit">Join the waitlist</button>
+                <button class="button" type="submit">Join Waitlist</button>
+                <span class="form-hint" id="form-hint" aria-live="polite"></span>
               </form>
-              <div id="waitlist-message" class="form-note" aria-live="polite"></div>
-              <div class="stat-row">
+              <div class="stats">
                 <div>
-                  <strong>2.7x</strong>
-                  <span>Faster launches</span>
+                  <span class="stat">4x</span>
+                  <span class="stat-label">faster cycles</span>
                 </div>
                 <div>
-                  <strong>48h</strong>
-                  <span>Average kickoff</span>
+                  <span class="stat">22%</span>
+                  <span class="stat-label">less churn</span>
                 </div>
                 <div>
-                  <strong>92%</strong>
-                  <span>On-time milestones</span>
+                  <span class="stat">1.2k</span>
+                  <span class="stat-label">teams skating</span>
                 </div>
               </div>
             </div>
             <div class="hero-card">
-              <div class="card-header">
-                <span>Live Sprint</span>
-                <span class="pill">Active</span>
+              <div class="card-top">
+                <span>Flowboard</span>
+                <span class="chip">Live</span>
               </div>
               <div class="card-body">
-                <div class="progress">
-                  <div class="progress-bar"></div>
+                <div class="row">
+                  <div class="dot"></div>
+                  <div>
+                    <p class="title">Launch sprint</p>
+                    <p class="desc">Ship the new trick stack</p>
+                  </div>
+                  <span class="tag">Today</span>
                 </div>
-                <ul>
-                  <li>Kickoff + scope lock</li>
-                  <li>Asset pipeline set</li>
-                  <li>Feedback lanes clear</li>
-                  <li>Launch checklist green</li>
-                </ul>
+                <div class="row">
+                  <div class="dot dot--pink"></div>
+                  <div>
+                    <p class="title">Feedback edge</p>
+                    <p class="desc">Map wins to roadmap</p>
+                  </div>
+                  <span class="tag">Triage</span>
+                </div>
+                <div class="row">
+                  <div class="dot dot--lime"></div>
+                  <div>
+                    <p class="title">Momentum pulse</p>
+                    <p class="desc">Keep the pace visible</p>
+                  </div>
+                  <span class="tag">Weekly</span>
+                </div>
               </div>
-              <div class="card-footer">Next drop in 6 days</div>
+              <div class="card-footer">
+                <span>Signal score</span>
+                <strong>92</strong>
+              </div>
             </div>
           </section>
 
-          <section id="features" class="features reveal">
+          <section class="features reveal" id="features">
             <div class="section-title">
-              <h2>Momentum tools built for shipping.</h2>
-              <p>Keep the skatepark busy with a clear lane from idea to drop.</p>
+              <h2>Built for teams that move.</h2>
+              <p>skategame blends product ops, research, and launch planning into a single lane.</p>
             </div>
             <div class="grid">
               <article>
-                <h3>Launch lanes</h3>
-                <p>Auto-organize sprints into launch-ready tracks with instant dependency alerts.</p>
+                <h3>Momentum lanes</h3>
+                <p>Organize every initiative by velocity so the right work hits the street first.</p>
               </article>
               <article>
-                <h3>Signal-first updates</h3>
-                <p>Replace noisy threads with a single signal board that keeps everyone synced.</p>
+                <h3>Signal capture</h3>
+                <p>Collect feedback, insights, and experiments in one stream that everyone trusts.</p>
               </article>
               <article>
-                <h3>Momentum metrics</h3>
-                <p>Track velocity, blockages, and ship confidence from one cinematic dashboard.</p>
+                <h3>Aligned launches</h3>
+                <p>Kick off, track, and deliver launches without meetings that drain energy.</p>
               </article>
             </div>
           </section>
 
-          <section id="workflow" class="workflow reveal">
+          <section class="workflow reveal" id="workflow">
             <div class="section-title">
-              <h2>Workflow that never stalls.</h2>
-              <p>Go from kickoff to launch in three crisp moves.</p>
+              <h2>Workflow that sticks the landing.</h2>
+              <p>Start in minutes. Skate through planning, execution, and post-launch learning.</p>
             </div>
-            <div class="steps">
+            <div class="timeline">
               <div class="step">
-                <span class="step-index">01</span>
-                <h3>Stack the run</h3>
-                <p>Define scope, align teams, and set the drop schedule in minutes.</p>
+                <span class="index">01</span>
+                <div>
+                  <h4>Capture</h4>
+                  <p>Gather input from users, sales, and the team — all in one lane.</p>
+                </div>
               </div>
               <div class="step">
-                <span class="step-index">02</span>
-                <h3>Stay on the rail</h3>
-                <p>Live checkpoints keep product, design, and engineering in tight sync.</p>
+                <span class="index">02</span>
+                <div>
+                  <h4>Stack</h4>
+                  <p>Score the best ideas with a lightning-fast priority board.</p>
+                </div>
               </div>
               <div class="step">
-                <span class="step-index">03</span>
-                <h3>Land the launch</h3>
-                <p>Instant retros let you lock in wins and adjust your next sprint.</p>
+                <span class="index">03</span>
+                <div>
+                  <h4>Ship</h4>
+                  <p>Launch with focus, share impact, and roll right into the next trick.</p>
+                </div>
               </div>
             </div>
           </section>
 
-          <section id="pricing" class="pricing reveal">
+          <section class="pricing reveal" id="pricing">
             <div class="section-title">
-              <h2>Pricing for fast-moving teams.</h2>
-              <p>Start free. Upgrade when you are ready to drop bigger releases.</p>
+              <h2>Simple, fast, no drama.</h2>
+              <p>Pick a plan that keeps your squad rolling.</p>
             </div>
             <div class="pricing-grid">
               <div class="price-card">
-                <h3>Starter</h3>
-                <p class="price">$0</p>
+                <h3>Kickflip</h3>
+                <p class="price">$29<span>/mo</span></p>
                 <ul>
-                  <li>3 active sprints</li>
-                  <li>Core momentum board</li>
-                  <li>Launch checklist</li>
+                  <li>Up to 5 skaters</li>
+                  <li>Momentum board</li>
+                  <li>Signal capture</li>
                 </ul>
-                <button class="button ghost">Get started</button>
+                <a class="button ghost" href="#cta">Start free</a>
               </div>
               <div class="price-card featured">
-                <h3>Momentum</h3>
-                <p class="price">$24</p>
+                <h3>Halfpipe</h3>
+                <p class="price">$79<span>/mo</span></p>
                 <ul>
-                  <li>Unlimited sprints</li>
-                  <li>Live stakeholder view</li>
-                  <li>Priority launch support</li>
+                  <li>Unlimited teammates</li>
+                  <li>Launch lanes</li>
+                  <li>Priority scoring</li>
                 </ul>
-                <button class="button">Start Momentum</button>
+                <a class="button" href="#cta">Go Halfpipe</a>
               </div>
               <div class="price-card">
-                <h3>Studio</h3>
-                <p class="price">$62</p>
+                <h3>Pro Park</h3>
+                <p class="price">Custom</p>
                 <ul>
-                  <li>Multi-team orchestration</li>
-                  <li>Custom lanes + metrics</li>
-                  <li>Dedicated launch pod</li>
+                  <li>Dedicated success</li>
+                  <li>Security suite</li>
+                  <li>Custom workflows</li>
                 </ul>
-                <button class="button ghost">Talk to us</button>
+                <a class="button ghost" href="#cta">Talk to us</a>
               </div>
             </div>
           </section>
 
-          <section id="cta" class="cta reveal">
+          <section class="cta reveal" id="cta">
             <div>
-              <h2>Ready to keep momentum high?</h2>
-              <p>Join the waitlist and get a private onboarding session when we open access.</p>
+              <h2>Ready to skate ahead?</h2>
+              <p>Join the waitlist and get early access drops plus launch credits.</p>
             </div>
-            <a class="button" href="#waitlist-form">Join the waitlist</a>
+            <a class="button" href="#top">Join the crew</a>
           </section>
         </main>
+        <footer class="footer">
+          <span>© 2026 skategame</span>
+          <span>Built for momentum.</span>
+        </footer>
       </div>
     </div>
   </body>
