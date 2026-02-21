@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>skategame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
@@ -33,79 +36,89 @@
                 Route decisions, lock team focus, and turn raw feedback into shipped outcomes.
                 No status theater. Just traction.
               </p>
-              <form id="waitlist-form" class="waitlist" data-waitlist>
-                <label class="sr-only" for="email">Email</label>
-                <input id="email" type="email" placeholder="you@team.com" required />
-                <button type="submit" class="button">Join Waitlist</button>
-                <p class="waitlist-msg" aria-live="polite"></p>
-              </form>
+              <div class="hero-actions">
+                <a class="button" href="#cta">Join Waitlist</a>
+                <a class="button button--ghost" href="#workflow">See Workflow</a>
+              </div>
             </div>
-            <div class="hero-panel">
-              <p class="kicker">This week</p>
-              <ul>
-                <li><strong>18</strong><span>Decisions closed</span></li>
-                <li><strong>42%</strong><span>Faster cycle time</span></li>
-                <li><strong>7.4h</strong><span>Weekly meeting time cut</span></li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="section reveal" id="features">
-            <h2>What makes it hit</h2>
-            <div class="feature-grid">
-              <article class="card">
-                <h3>Decision Rails</h3>
-                <p>Capture choices, owners, and deadlines in one lane so decisions stop drifting.</p>
+            <div class="hero-metrics">
+              <article>
+                <h3>2.7x</h3>
+                <p>Faster issue-to-release cycle</p>
               </article>
-              <article class="card">
-                <h3>Focus Windows</h3>
-                <p>Protect build time with timed collaboration windows and auto-muted chatter.</p>
+              <article>
+                <h3>91%</h3>
+                <p>Roadmap confidence in active teams</p>
               </article>
-              <article class="card">
-                <h3>Feedback Sprints</h3>
-                <p>Convert scattered comments into ranked, actionable work in minutes.</p>
+              <article>
+                <h3>0</h3>
+                <p>Weekly status meetings required</p>
               </article>
             </div>
           </section>
 
-          <section class="section reveal" id="workflow">
-            <h2>Workflow</h2>
-            <div class="workflow">
-              <div><span>01</span><p>Collect signal from product, support, and users.</p></div>
-              <div><span>02</span><p>Rank by impact and confidence.</p></div>
-              <div><span>03</span><p>Ship with clear ownership and timestamps.</p></div>
+          <section class="panel reveal" id="features">
+            <h2>Everything that pushes teams forward</h2>
+            <div class="grid">
+              <article class="card">
+                <h3>Signal Capture</h3>
+                <p>Collect feedback from Slack, support, and playtests into one ranked stream.</p>
+              </article>
+              <article class="card">
+                <h3>Decision Lanes</h3>
+                <p>Auto-route ideas by impact and owner so nothing stalls in committee.</p>
+              </article>
+              <article class="card">
+                <h3>Build Heatmap</h3>
+                <p>Visualize bottlenecks instantly with live throughput and risk alerts.</p>
+              </article>
             </div>
           </section>
 
-          <section class="section reveal" id="pricing">
-            <h2>Pricing</h2>
-            <div class="pricing-grid">
-              <article class="card">
+          <section class="panel reveal" id="workflow">
+            <h2>Workflow built for speed</h2>
+            <div class="timeline">
+              <div><span>01</span><p>Capture live player signals and classify intent.</p></div>
+              <div><span>02</span><p>Prioritize with weighted confidence and clear ownership.</p></div>
+              <div><span>03</span><p>Ship, measure, and auto-roll insights back into backlog.</p></div>
+            </div>
+          </section>
+
+          <section class="panel reveal" id="pricing">
+            <h2>Simple pricing, serious output</h2>
+            <div class="grid pricing-grid">
+              <article class="card price-card">
                 <h3>Starter</h3>
-                <p class="price">$0</p>
-                <p>Small teams testing velocity systems.</p>
-              </article>
-              <article class="card card--featured">
-                <h3>Core</h3>
                 <p class="price">$39<span>/seat</span></p>
-                <p>For teams shipping weekly and scaling fast.</p>
+                <p>For small strike teams shipping weekly.</p>
               </article>
-              <article class="card">
-                <h3>Studio</h3>
+              <article class="card price-card featured">
+                <h3>Pro</h3>
+                <p class="price">$89<span>/seat</span></p>
+                <p>For scaling product orgs that need alignment and speed.</p>
+              </article>
+              <article class="card price-card">
+                <h3>Enterprise</h3>
                 <p class="price">Custom</p>
-                <p>Advanced controls, SSO, and tailored onboarding.</p>
+                <p>Security controls, custom workflows, dedicated support.</p>
               </article>
             </div>
           </section>
 
           <section class="cta reveal" id="cta">
-            <h2>Ship harder. Drift less.</h2>
-            <a class="button" href="#top">Request Early Access</a>
+            <h2>Get early access to skategame</h2>
+            <p>Join the waitlist and get launch perks, onboarding priority, and direct roadmap access.</p>
+            <form class="waitlist" data-waitlist>
+              <label class="sr-only" for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@studio.com" required />
+              <button class="button" type="submit">Request Invite</button>
+              <p class="form-note" aria-live="polite">No spam. One update when your slot opens.</p>
+            </form>
           </section>
         </main>
 
         <footer class="footer">
-          <p>skategame <span id="year"></span></p>
+          <p>© 2026 skategame. Build hard. Ship clean.</p>
         </footer>
       </div>
     </div>
