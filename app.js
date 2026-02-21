@@ -1,39 +1,42 @@
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-const revealElements = document.querySelectorAll('.reveal');
-if (!prefersReduced && 'IntersectionObserver' in window) {
+document.addEventListener('DOMContentLoaded', () => {
+  const revealItems = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.18 }
   );
-  revealElements.forEach((el) => observer.observe(el));
-} else {
-  revealElements.forEach((el) => el.classList.add('is-visible'));
-}
 
-const forms = document.querySelectorAll('[data-waitlist]');
-forms.forEach((form) => {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const input = form.querySelector('input[type="email"]');
-    const message = form.querySelector('.form-message');
-    const email = input.value.trim();
+  revealItems.forEach((item) => observer.observe(item));
 
-    if (!email || !email.includes('@')) {
-      message.textContent = 'Drop a real email so we can reach you.';
-      message.style.color = '#ff5b6b';
-      return;
-    }
+  const form = document.getElementById('waitlist-form');
+  if (form) {
+    const emailInput = form.querySelector('input[type="email"]');
+    const msg = form.querySelector('.waitlist-msg');
 
-    message.textContent = 'You are on the list. Look for an invite soon.';
-    message.style.color = '#b7ff4a';
-    form.reset();
-  });
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = (emailInput?.value || '').trim();
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      form.classList.remove('is-error', 'is-success');
+
+      if (!isValid) {
+        form.classList.add('is-error');
+        if (msg) msg.textContent = 'Enter a valid email address.';
+        return;
+      }
+
+      form.classList.add('is-success');
+      if (msg) msg.textContent = 'You are on the waitlist. Invite incoming soon.';
+      form.reset();
+    });
+  }
+
+  const year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
 });
